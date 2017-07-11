@@ -51,7 +51,8 @@ public class ApiController {
     public ResponseEntity getUserByEmail(@RequestHeader("Email-Address") String email) {
         Optional<User> user = userRepository.findByEmail(email);
         if (user.isPresent()) {
-            return new ResponseEntity(HttpStatus.OK);
+            int id = user.get().getId();
+            return new ResponseEntity(id, HttpStatus.OK);
         } else {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
