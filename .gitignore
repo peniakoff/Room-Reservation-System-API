@@ -2,8 +2,6 @@
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
-src/main/resources/application.properties
-
 ### STS ###
 .apt_generated
 .classpath
@@ -17,3 +15,5 @@ src/main/resources/application.properties
 *.iws
 *.iml
 *.ipr
+
+/src/main/resources/application.properties
