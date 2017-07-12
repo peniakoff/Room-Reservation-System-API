@@ -3,6 +3,7 @@ package pl.tomaszmiller.roomreservationsystemAPI;
 import org.springframework.data.repository.CrudRepository;
 import pl.tomaszmiller.roomreservationsystemAPI.models.User;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -10,6 +11,7 @@ import java.util.Optional;
  */
 public interface UserRepository extends CrudRepository<User, Integer> {
 
+    List<User> findAll();
     Optional<User> findByEmail(String email);
 
 }
